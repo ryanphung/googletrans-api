@@ -1,0 +1,14 @@
+{
+  "name": "googletrans-api",
+  "version": "1.0.0",
+  "description": "Simple API to translate text using Google Translate API",
+  "main": "index.js",
+  "repository": "https://github.com/ryanphung/googletrans-api.git",
+  "author": "Ryan Phung <ryan.phung@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "googletrans2": "^1.0.2"
+  }
+}
