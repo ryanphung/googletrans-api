@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 var cors = require('cors');
+const { translate } = require('./translate');
 
 app.use(
     cors({
@@ -10,8 +11,12 @@ app.use(
 );
 app.options('*', cors());
 
-app.get('/', (req, res) => res.send('Working!!!'));
+app.get('/', (req, res) => res.send('Welcome!'));
 
-app.listen(process.env.PORT || 3000, function() {
-    console.log('server running on port 3000', '');
+app.get('/translate', translate);
+
+const port = process.env.PORT || 3001
+
+app.listen(port, function() {
+    console.log(`server running on port ${port}`, '');
 });
